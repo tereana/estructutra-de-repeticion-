@@ -1,0 +1,29 @@
+let cantidadAlumnos 
+let nota=0
+let contadorAlumnos
+let contadorAprobado=0
+let contadorReprobado=0 
+let sumatoriaNotas=0
+let promedioNotas
+let cantidadNotas=0
+
+contadorAlumnos=1 
+cantidadAlumnos=Number(prompt("Ingrese la cantidad de alumnos"))
+
+while(contadorAlumnos<cantidadAlumnos){
+  nota=Number(prompt("Ingrese la nota del alumno" + contadorAlumnos))
+contadorAlumnos=contadorAlumnos+1
+sumatoriaNotas=nota+sumatoriaNotas
+  
+if(nota>=4){
+  contadorAprobado=contadorAprobado+1
+}
+else{
+  contadorReprobado=contadorReprobado+1
+}
+}
+cantidadNotas=cantidadAlumnos
+promedioNotas=sumatoriaNotas/cantidadNotas
+alert("El promedio del grupo es: " + promedioNotas)
+alert("La cantidad de alumnos desaprobados es: " + contadorReprobado)
+alert("La cantidad de alumnos aprobados es: " + contadorAprobado)
